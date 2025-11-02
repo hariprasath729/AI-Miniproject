@@ -23,6 +23,7 @@ if 'rl_optimizer' not in st.session_state:
     st.session_state.rl_optimizer = None
 
 # Load initial state from file
+os.makedirs("data", exist_ok=True)
 STATE_FILE = 'data/planner_state.json'
 if os.path.exists(STATE_FILE):
     with open(STATE_FILE, 'r') as f:
